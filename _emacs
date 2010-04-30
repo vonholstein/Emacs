@@ -8,6 +8,7 @@
 ;;;load libraries
 (setq load-path (cons "~/lib/color-theme" load-path))
 (setq load-path (cons "~/lib/icicles" load-path))
+(setq load-path (cons "~/lib/ruby" load-path))
 (setq load-path (cons "~/lib" load-path))
 
 
@@ -58,11 +59,15 @@
 (my-keys-minor-mode 1)
 
 ;;VB mode
-(require 'visual-basic-mode)
-(add-to-list 'auto-mode-alist '("\\.mts" . visual-basic-mode))
+;;(require 'visual-basic-mode)
+;;(add-to-list 'auto-mode-alist '("\\.mts" . visual-basic-mode))
 
 
 ;;log-4j
 (autoload 'log4j-mode "log4j-mode" "Major mode for viewing log files." t)
 (add-to-list 'auto-mode-alist '("\\.log\\'" . log4j-mode))
 
+;;ruby-mode
+(autoload 'ruby-mode "ruby-mode" "major mode for ruby files" t)
+(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
