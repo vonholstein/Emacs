@@ -27,8 +27,10 @@
 
 ;;cedet
 
-;;ect
+;;ecb
 (require 'ecb)
+; set ecb windows width
+(setq ecb-windows-width 0.20)
 
 ;;smart-split
 (defun smart-split ()
