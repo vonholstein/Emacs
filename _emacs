@@ -32,6 +32,10 @@
 ; set ecb windows width
 (setq ecb-windows-width 0.20)
 
+;;yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
 ;;smart-split
 (defun smart-split ()
   "Split the frame into 80-column sub-windows, and make sure no window has fewer than 80 columns." 
@@ -89,10 +93,12 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(ecb-source-path (quote ("~/rails-projects"))))
+ '(ecb-options-version "2.40")
+ '(ecb-source-path (quote ("~/rails-projects")))
+ '(ecb-tip-of-the-day nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#c0c0c0" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "outline" :family "Bitstream Vera Sans Mono")))))
