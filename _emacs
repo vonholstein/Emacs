@@ -5,15 +5,19 @@
 (setq visible-bell t) ;;disable system beep
 (setq inhibit-startup-message t) ;;disable emacs start screen
 
+;;set shell to git
+(setq explicit-shell-file-name "C:/Git/bin/sh.exe")
+
 ;;;load libraries
 (setq load-path (cons "~/lib/color-theme" load-path))
 (setq load-path (cons "~/lib/icicles" load-path))
 (setq load-path (cons "~/lib/ruby" load-path))
 (setq load-path (cons "~/lib/ecb" load-path))
+(setq load-path (cons "~/lib/rinari" load-path))
+(setq load-path (cons "~/lib/rinari/rhtml" load-path))
 (setq load-path (cons "~/lib" load-path))
 
 (load-file "~/lib/cedet/common/cedet.el")
-
 
 ;;icicles
 (require 'icicles)
@@ -23,7 +27,10 @@
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
+     (load-file "~/lib/color-theme/color-theme-blackboard.el")     
      (color-theme-hober)))
+
+
 
 ;;cedet
 
@@ -32,9 +39,8 @@
 ; set ecb windows width
 (setq ecb-windows-width 0.20)
 
-;;yaml-mode
-(require 'yaml-mode)
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+;;rinari
+(require 'rinari)
 
 ;;smart-split
 (defun smart-split ()
@@ -94,8 +100,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(ecb-options-version "2.40")
- '(ecb-source-path (quote ("~/rails-projects")))
- '(ecb-tip-of-the-day nil))
+ '(ecb-source-path (quote ("~/rails-projects"))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
