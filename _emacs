@@ -10,6 +10,8 @@
 (setq load-path (cons "~/lib/icicles" load-path))
 (setq load-path (cons "~/lib/ruby" load-path))
 (setq load-path (cons "~/lib/ecb" load-path))
+(setq load-path (cons "~/lib/rinari" load-path))
+(setq load-path (cons "~/lib/rinari/rhtml" load-path))
 (setq load-path (cons "~/lib" load-path))
 
 (load-file "~/lib/cedet/common/cedet.el")
@@ -17,6 +19,7 @@
 
 ;;icicles
 (require 'icicles)
+(icy-mode 1)
 
 ;;;color-theme settings
 (require 'color-theme)
@@ -35,6 +38,9 @@
 ;;yaml-mode
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+;;rinari
+(require 'rinari)
 
 ;;smart-split
 (defun smart-split ()
