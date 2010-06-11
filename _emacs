@@ -31,7 +31,6 @@
      (color-theme-hober)))
 
 
-
 ;;cedet
 
 ;;ecb
@@ -41,6 +40,14 @@
 
 ;;rinari
 (require 'rinari)
+
+;;vbscript
+(require 'visual-basic-mode)
+;VBScript editing
+(setq auto-mode-alist
+      (append '(("\\.\\(vbs\\|wsf\\)$" . visual-basic-mode))
+	      auto-mode-alist))
+
 
 ;;smart-split
 (defun smart-split ()
@@ -107,3 +114,5 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#c0c0c0" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "outline" :family "Bitstream Vera Sans Mono")))))
+
+(put 'narrow-to-region 'disabled nil)

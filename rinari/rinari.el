@@ -153,18 +153,20 @@ exec-to-string command, but it works and seems fast"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; misc
-
+;; change to return full path in windows
 (defun rails-root (&optional dir)
+  (interactive)
   (or dir (setq dir default-directory))
   (if (file-exists-p (concat dir "config/environment.rb"))
-      dir
+      (expand-file-name dir)
     (if (equal dir  "/")
 	nil
       (rails-root (expand-file-name (concat dir "../"))))))
 
+
 (defun rinari-console ()
   (interactive)
-  (run-ruby (concat (rails-root) "/script/console")))
+  (run-ruby (concat  "ruby " (rails-root) "script/console")))
 
 (define-key ruby-mode-map
   "\C-c\C-s" 'rinari-console)
