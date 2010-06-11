@@ -21,6 +21,7 @@
 
 ;;icicles
 (require 'icicles)
+(icy-mode 1)
 
 ;;;color-theme settings
 (require 'color-theme)
