@@ -9,15 +9,15 @@
 (setq explicit-shell-file-name "C:/Git/bin/sh.exe")
 
 ;;;load libraries
-(setq load-path (cons "~/lib/color-theme" load-path))
-(setq load-path (cons "~/lib/icicles" load-path))
-(setq load-path (cons "~/lib/ruby" load-path))
-(setq load-path (cons "~/lib/ecb" load-path))
-(setq load-path (cons "~/lib/rinari" load-path))
-(setq load-path (cons "~/lib/rinari/rhtml" load-path))
+(setq load-path (cons "~/lib-emacs/color-theme" load-path))
+(setq load-path (cons "~/lib-emacs/icicles" load-path))
+(setq load-path (cons "~/lib-emacs/ruby" load-path))
+(setq load-path (cons "~/lib-emacs/ecb" load-path))
+(setq load-path (cons "~/lib-emacs/rinari" load-path))
+(setq load-path (cons "~/lib-emacs/rinari/rhtml" load-path))
 (setq load-path (cons "~/lib" load-path))
 
-(load-file "~/lib/cedet/common/cedet.el")
+(load-file "~/lib-emacs/cedet/common/cedet.el")
 
 ;;icicles
 (require 'icicles)
@@ -28,7 +28,7 @@
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
-     (load-file "~/lib/color-theme/color-theme-blackboard.el")     
+     (load-file "~/lib-emacs/color-theme/color-theme-blackboard.el")     
      (color-theme-hober)))
 
 
