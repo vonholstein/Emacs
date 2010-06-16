@@ -6,7 +6,7 @@
 (setq inhibit-startup-message t) ;;disable emacs start screen
 
 ;;set shell to git
-(setq explicit-shell-file-name "C:/Git/bin/sh.exe")
+;;(setq explicit-shell-file-name "C:/Git/bin/sh.exe")
 
 ;;;load libraries
 (setq load-path (cons "~/lib-emacs/color-theme" load-path))
@@ -15,6 +15,7 @@
 (setq load-path (cons "~/lib-emacs/ecb" load-path))
 (setq load-path (cons "~/lib-emacs/rinari" load-path))
 (setq load-path (cons "~/lib-emacs/rinari/rhtml" load-path))
+(setq load-path (cons "~/lib-emacs/magit" load-path))
 (setq load-path (cons "~/lib" load-path))
 
 (load-file "~/lib-emacs/cedet/common/cedet.el")
@@ -41,13 +42,6 @@
 
 ;;rinari
 (require 'rinari)
-
-;;vbscript
-(require 'visual-basic-mode)
-;VBScript editing
-(setq auto-mode-alist
-      (append '(("\\.\\(vbs\\|wsf\\)$" . visual-basic-mode))
-	      auto-mode-alist))
 
 
 ;;smart-split
@@ -102,6 +96,7 @@
 (autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 (autoload 'inf-ruby-keys "inf-ruby" "Set local key defs for inf-ruby in ruby-mode")
 (add-hook 'ruby-mode-hook '(lambda () (inf-ruby-keys)))
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -109,11 +104,23 @@
   ;; If there is more than one, they won't work right.
  '(ecb-options-version "2.40")
  '(ecb-source-path (quote ("~/rails-projects"))))
+
+(setq ecb-tip-of-the-day nil) ;;disable ecb tip of the day
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#c0c0c0" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "outline" :family "Bitstream Vera Sans Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#c0c0c0" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 79 :width normal :foundry "bitstream" :family "Bitstream Vera Sans Mono")))))
 
 (put 'narrow-to-region 'disabled nil)
+
+(put 'dired-find-alternate-file 'disabled nil)
+
+
+;;; Autoloads for magit
+
+(autoload 'magit-status "magit" nil t)
+
+
