@@ -1,0 +1,3 @@
+This folder stores dependencies required by emacs extensions
+
+eg ri.el requires ruby script ri_repl
