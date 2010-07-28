@@ -6,5 +6,5 @@
 
 ;; escape funny characters in emacs shell
 ;; from http://stackoverflow.com/questions/704616/something-wrong-with-emacs-shell
-;;(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-;;(add-hook 'term-mode-hook 'ansi-color-for-comint-mode-on)
+(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
