@@ -10,3 +10,9 @@
 
 ;;ri
 (require 'ri)
+
+;;outline mode for ruby
+(add-hook 'ruby-mode-hook
+              '(lambda ()
+                 (outline-minor-mode)
+                 (setq outline-regexp " *\\(def \\|class\\|module\\)")))
