@@ -33,3 +33,7 @@
 (my-keys-minor-mode 1)
 
 (put 'narrow-to-region 'disabled nil)
+
+
+;;enable paren mode
+(show-paren-mode 1)
