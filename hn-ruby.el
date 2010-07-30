@@ -11,8 +11,21 @@
 ;;ri
 (require 'ri)
 
+
+(defun rspec-spec-file-p (a-file-name)
+  "Returns true if the specified file is a spec"
+  (string-match "\\(_\\|-\\)spec\\.rb$" a-file-name))
+
+
+(if (rspec-spec-file-p buffer-file-name)
+    (setq outline-regexp-value " *\\(describe \\|it\\)")
+  (setq outline-regexp-value " *\\(def \\|class\\|module\\)"))
+
 ;;outline mode for ruby
 (add-hook 'ruby-mode-hook
               '(lambda ()
                  (outline-minor-mode)
-                 (setq outline-regexp " *\\(def \\|class\\|module\\)")))
+                 (setq outline-regexp outline-regexp-value)))
+  
+
+
