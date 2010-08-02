@@ -7,6 +7,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/icicles" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/ruby" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/ecb" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/multi-term" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/rinari" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/rinari/rhtml" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/magit" load-path))
@@ -21,6 +22,8 @@
 (require 'ecb)
 (require 'rinari)
 (require 'yasnippet)
+(require 'multiterm)
+(require 'multi-term)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; color-theme
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
