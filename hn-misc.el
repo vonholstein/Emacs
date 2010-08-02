@@ -34,6 +34,8 @@
 
 (put 'narrow-to-region 'disabled nil)
 
+(setq browse-url-generic-program (executable-find "conkeror")
+      browse-url-browser-function 'browse-url-generic)
 
 ;;enable paren mode
 (show-paren-mode 1)
