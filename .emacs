@@ -3,7 +3,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Library paths
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq load-path (cons "~/lib-emacs/vendor/ack" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/color-theme" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/icicles" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/ruby" load-path))
@@ -14,6 +13,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/magit" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/yasnippet" load-path))
 (setq load-path (cons "~/lib-emacs" load-path))
+(load-file "~/lib-emacs/vendor/ack/ack.el")
 ;;(load-file "~/lib-emacs/vendor/cedet/common/cedet.el") ;;disabled cedet for emacs 24
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
