@@ -2,8 +2,8 @@
 
 ;;; Copyright (C) 2007 Daniel Debertin (debertin@gmail.com)
 
-;; Author: root <root@hnahas-ubuntu>
-;; Created: 2010-07-15 11:32:19+0530
+;; Author: hnahas <hnahas@hnahas-ubuntu>
+;; Created: 2010-08-03 11:49:22+0530
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

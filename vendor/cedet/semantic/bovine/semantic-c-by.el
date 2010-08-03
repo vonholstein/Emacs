@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Eric M. Ludlam
 
-;; Author: root <root@hnahas-ubuntu>
-;; Created: 2010-07-15 11:32:04+0530
+;; Author: hnahas <hnahas@hnahas-ubuntu>
+;; Created: 2010-08-03 11:49:17+0530
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

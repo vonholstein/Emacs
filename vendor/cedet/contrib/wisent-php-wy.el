@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2008 Free Software Foundation
 
-;; Author: root <root@hnahas-ubuntu>
-;; Created: 2010-07-15 11:32:20+0530
+;; Author: hnahas <hnahas@hnahas-ubuntu>
+;; Created: 2010-08-03 11:49:22+0530
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
