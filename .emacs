@@ -3,6 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Library paths
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq load-path (cons "~/lib-emacs/vendor/ack" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/color-theme" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/icicles" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/ruby" load-path))
@@ -23,6 +24,7 @@
 (require 'rinari)
 (require 'yasnippet)
 (require 'multi-term)
+(require 'ack-emacs)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; color-theme
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
