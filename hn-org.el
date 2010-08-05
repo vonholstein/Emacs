@@ -72,7 +72,7 @@
 
 (setq org-agenda-files (quote ("~/org/refile.org"
 			       "~/org/todo.org"
-			       "~/org/notes.org")))
+			       "~/org/work.org")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;; Todo setup ;;;;;;;;;;;;;;;;;;;;;;;;;
