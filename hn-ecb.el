@@ -2,3 +2,4 @@
 (setq ecb-tip-of-the-day nil) ;;disable ecb tip of the day
 (setq ecb-options-version "2.40")
 (setq ecb-source-path (quote (("~/ruby-projects/sinatra" "sinatra") ("~/org" "org") ("~/lib-emacs" "lib-emacs"))))
+(global-set-key (kbd "<f6>") 'ecb-toggle-ecb-windows)
