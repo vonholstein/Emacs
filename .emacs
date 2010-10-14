@@ -12,6 +12,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/rinari/rhtml" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/magit" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/yasnippet" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/dosbat" load-path))
 (setq load-path (cons "~/lib-emacs" load-path))
 (load-file "~/lib-emacs/vendor/ack/ack.el")
 ;;(load-file "~/lib-emacs/vendor/cedet/common/cedet.el") ;;disabled cedet for emacs 24
@@ -25,6 +26,7 @@
 (require 'yasnippet)
 (require 'multi-term)
 (require 'ack-emacs)
+(require 'dosbat)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; color-theme
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -33,6 +35,10 @@
 ;; dired
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-file (concat emacs-lib-root "//hn-dired.el"))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; dosbat
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-file (concat emacs-lib-root "//hn-dosbat.el"))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Emacs Code Browser
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
