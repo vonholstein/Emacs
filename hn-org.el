@@ -1,4 +1,5 @@
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\)$" . org-mode))
+
 (add-hook 'remember-mode-hook 'org-remember-apply-template)
 
 (define-key global-map [(control meta ?r)] 'remember)
@@ -75,15 +76,33 @@
 			       "~/org/work.org"
 			       "~/org/personal.org")))
 
+
+
+(setq org-completion-use-ido t)
+
+; Targets include this file and any file contributing to the agenda - up to 5 levels deep
+(setq org-refile-targets (quote ((org-agenda-files :maxlevel . 5) (nil :maxlevel . 5))))
+
+; Targets start with the file name - allows creating level 1 tasks
+(setq org-refile-use-outline-path (quote file))
+
+; Targets complete in steps so we start with filename, TAB shows the next level of targets etc
+(setq org-outline-path-complete-in-steps t)
+
+; Allow refile to create parent tasks with confirmation
+(setq org-refile-allow-creating-parent-nodes (quote confirm))
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;; Todo setup ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq org-todo-keywords (quote ((sequence "TODO(t@/!)" "NEXT(n)" "|" "DONE(d!/!)")
+(setq org-todo-keywords (quote ((type "PROJECT(p!)") (sequence "TODO(t@/!)" "NEXT(n)" "|" "DONE(d!/!)")
  (sequence "WAITING(w@/!)" "SOMEDAY(s!)" "|" "CANCELLED(c@/!)"))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO"      :foreground "red"          :weight bold)
+	      ("PROJECT"   :foreground "indigo"       :weight bold)
               ("NEXT"      :foreground "blue"         :weight bold)
               ("DONE"      :foreground "forest green" :weight bold)
               ("WAITING"   :foreground "yellow"       :weight bold)
