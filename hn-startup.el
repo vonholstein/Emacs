@@ -8,3 +8,6 @@
 ;; from http://stackoverflow.com/questions/704616/something-wrong-with-emacs-shell
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+
+;; Redefine C-x C-b to ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)
