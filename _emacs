@@ -16,6 +16,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/csharp" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/auto-complete" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/undo-tree" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/yaml-mode" load-path))
 (setq load-path (cons "~/lib-emacs" load-path))
 (load-file "~/lib-emacs/vendor/ack/ack.el")
 ;;(load-file "~/lib-emacs/vendor/cedet/common/cedet.el") ;;disabled cedet for emacs 24
@@ -33,6 +34,7 @@
 (require 'csharp-mode)
 (require 'auto-complete-config)
 (require 'undo-tree)
+(require 'yaml-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; auto-complete
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
