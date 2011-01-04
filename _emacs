@@ -3,38 +3,40 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Library paths
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq load-path (cons "~/lib-emacs" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/auto-complete" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/color-theme" load-path))
-(setq load-path (cons "~/lib-emacs/vendor/icicles" load-path))
-(setq load-path (cons "~/lib-emacs/vendor/ruby" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/csharp" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/dired+" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/dosbat" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/ecb" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/icicles" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/magit" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/multi-term" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/rinari" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/rinari/rhtml" load-path))
-(setq load-path (cons "~/lib-emacs/vendor/magit" load-path))
-(setq load-path (cons "~/lib-emacs/vendor/yasnippet" load-path))
-(setq load-path (cons "~/lib-emacs/vendor/dosbat" load-path))
-(setq load-path (cons "~/lib-emacs/vendor/csharp" load-path))
-(setq load-path (cons "~/lib-emacs/vendor/auto-complete" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/ruby" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/undo-tree" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/yaml-mode" load-path))
-(setq load-path (cons "~/lib-emacs" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/yasnippet" load-path))
 (load-file "~/lib-emacs/vendor/ack/ack.el")
 ;;(load-file "~/lib-emacs/vendor/cedet/common/cedet.el") ;;disabled cedet for emacs 24
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'icicles)
-(require 'color-theme)
-(require 'ecb)
-(require 'rinari)
-(require 'yasnippet)
-(require 'multi-term)
 (require 'ack-emacs)
-(require 'dosbat)
-(require 'csharp-mode)
 (require 'auto-complete-config)
+(require 'color-theme)
+(require 'csharp-mode)
+(require 'dired+)
+(require 'dosbat)
+(require 'ecb)
+(require 'icicles)
+(require 'multi-term)
+(require 'rinari)
 (require 'undo-tree)
 (require 'yaml-mode)
+(require 'yasnippet)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; auto-complete
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
