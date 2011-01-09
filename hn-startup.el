@@ -11,3 +11,11 @@
 
 ;; Redefine C-x C-b to ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; Use gnu find for find-file
+(setq find-program "c:\\gnuwin32\\bin\\find.exe")
+
+;; enable epa
+(epa-file-enable)
+
+

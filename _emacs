@@ -35,6 +35,7 @@
 (require 'dired+)
 (require 'dosbat)
 (require 'ecb)
+(require 'epa-file)
 (require 'icicles)
 (require 'linkd)
 (require 'multi-term)
