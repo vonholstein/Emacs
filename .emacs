@@ -16,9 +16,8 @@
 (setq load-path (cons "~/lib-emacs/vendor/magit" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/maxframe" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/multi-term" load-path))
-;(setq load-path (cons "~/lib-emacs/vendor/rinari" load-path))
-;(setq load-path (cons "~/lib-emacs/vendor/rinari/rhtml" load-path))
-(setq load-path (cons "~/lib-emacs/vendor/emacs-rails-reloaded" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/rinari" load-path))
+;(setq load-path (cons "~/lib-emacs/vendor/emacs-rails-reloaded" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/ruby" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/undo-tree" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/w32-browser" load-path))
@@ -26,7 +25,6 @@
 (setq load-path (cons "~/lib-emacs/vendor/yasnippet" load-path))
 (load-file "~/lib-emacs/vendor/ack/ack.el")
 (load (concat emacs-lib-root "/vendor/nxhtml/autostart.el"))
-;;(load-file "~/lib-emacs/vendor/cedet/common/cedet.el") ;;disabled cedet for emacs 24
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -43,8 +41,8 @@
 (require 'linkd)
 (require 'maxframe)
 (require 'multi-term)
-(require 'rails-autoload)
-;(require 'rinari)
+;(require 'rails-autoload)
+(require 'rinari)
 (require 'undo-tree)
 (require 'w32-browser)
 (require 'yaml-mode)
