@@ -17,4 +17,5 @@
 ;; enable epa
 (epa-file-enable)
 
-
+;; maximize frame using maxframe
+(add-hook 'window-setup-hook 'maximize-frame t)
