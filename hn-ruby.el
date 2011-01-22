@@ -16,16 +16,16 @@
   "Returns true if the specified file is a spec"
   (string-match "\\(_\\|-\\)spec\\.rb$" a-file-name))
 
-(defun get-outline-regexp-value ()
-  (if (rspec-spec-file-p buffer-file-name)
-      " *\\(describe \\|it\\)"
-    " *\\(def \\|class\\|module\\)"))
+;; (defun get-outline-regexp-value ()
+;;   (if (rspec-spec-file-p buffer-file-name)
+;;       " *\\(describe \\|it\\)"
+;;     " *\\(def \\|class\\|module\\)"))
 
-;;outline mode for ruby
-(add-hook 'ruby-mode-hook
-              '(lambda ()
-                 (outline-minor-mode)
-                 (setq outline-regexp (get-outline-regexp-value))))
+;; ;;outline mode for ruby
+;; (add-hook 'ruby-mode-hook
+;;               '(lambda ()
+;;                  (outline-minor-mode)
+;;                  (setq outline-regexp (get-outline-regexp-value))))
   
 
 
