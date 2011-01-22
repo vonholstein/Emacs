@@ -19,3 +19,8 @@
 
 ;; maximize frame using maxframe
 (add-hook 'window-setup-hook 'maximize-frame t)
+
+;; set backup files directory -- to not clutter working directory
+;; from http://www.emacswiki.org/emacs/BackupDirectory
+(setq backup-directory-alist `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
