@@ -21,6 +21,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/undo-tree" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/w32-browser" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/yaml-mode" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/yari.el" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/yasnippet" load-path))
 (load-file "~/lib-emacs/vendor/ack/ack.el")
 (load (concat emacs-lib-root "/vendor/nxhtml/autostart.el"))
@@ -44,6 +45,7 @@
 (require 'undo-tree)
 (require 'w32-browser)
 (require 'yaml-mode)
+(require 'yari)
 (require 'yasnippet)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; auto-complete

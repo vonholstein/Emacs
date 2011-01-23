@@ -29,3 +29,8 @@
   
 
 
+;; yari.el settings
+(defun ri-bind-key ()
+  (local-set-key (kbd "C-c y") 'yari))
+
+(add-hook 'ruby-mode-hook 'ri-bind-key)
