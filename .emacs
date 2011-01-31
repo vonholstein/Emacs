@@ -12,6 +12,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/dosbat" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/ecb" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/icicles" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/ledger" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/linkd" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/magit" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/maxframe" load-path))
@@ -24,6 +25,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/yari.el" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/yasnippet" load-path))
 (load-file "~/lib-emacs/vendor/ack/ack.el")
+(load "ledger")
 (load (concat emacs-lib-root "/vendor/nxhtml/autostart.el"))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
