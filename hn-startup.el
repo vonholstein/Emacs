@@ -1,5 +1,6 @@
 (menu-bar-mode 1)
 (tool-bar-mode 0)
+(scroll-bar-mode 0)
 (global-font-lock-mode t)
 (setq visible-bell t) ;;disable system beep
 (setq inhibit-startup-message t) ;;disable emacs start screen
@@ -7,7 +8,7 @@
 ;; escape funny characters in emacs shell
 ;; from http://stackoverflow.com/questions/704616/something-wrong-with-emacs-shell
 ;(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+;;(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 ;; Redefine C-x C-b to ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -24,3 +25,7 @@
 ;; from http://www.emacswiki.org/emacs/BackupDirectory
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+
+;; prefer cperl to perl
+;; from emacswiki CPerlMode
+(defalias 'perl-mode 'cperl-mode)
