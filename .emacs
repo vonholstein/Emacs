@@ -15,6 +15,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/dosbat" load-path))
 (setq load-path (cons "~/lib-emacs" load-path))
 (load-file "~/lib-emacs/vendor/ack/ack.el")
+(load-file "~/lib-emacs/vendor/nxhtml/autostart.el")
 ;;(load-file "~/lib-emacs/vendor/cedet/common/cedet.el") ;;disabled cedet for emacs 24
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

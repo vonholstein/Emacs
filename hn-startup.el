@@ -18,4 +18,15 @@
 ;; enable epa
 (epa-file-enable)
 
+;; use gnuwin32 diff for ediff
+(setq ediff-diff-program "c:\\gnuwin32\\bin\\diff.exe")
 
+;; set backup to .saves folder
+(setq
+   backup-by-copying t      ; don't clobber symlinks
+   backup-directory-alist
+    '(("." . "~/.saves"))    ; don't litter my fs tree
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)       ; use versioned backups
