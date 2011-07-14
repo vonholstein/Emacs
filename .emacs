@@ -17,7 +17,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/magit" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/maxframe" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/multi-term" load-path))
-(setq load-path (cons "~/lib-emacs/vendor/rinari" load-path))
+;(setq load-path (cons "~/lib-emacs/vendor/rinari" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/ruby" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/undo-tree" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/w32-browser" load-path))
@@ -26,7 +26,13 @@
 (setq load-path (cons "~/lib-emacs/vendor/yasnippet" load-path))
 (load-file "~/lib-emacs/vendor/ack/ack.el")
 (load "ledger")
-(load (concat emacs-lib-root "/vendor/nxhtml/autostart.el"))
+
+(let ((default-directory "~/lib-emacs/vendor"))
+  (normal-top-level-add-to-load-path '("apel" "flim" "semi")))
+
+(let ((default-directory "~/lib-emacs/vendor/wl"))
+  (normal-top-level-add-subdirs-to-load-path))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -43,12 +49,13 @@
 (require 'linkd)
 (require 'maxframe)
 (require 'multi-term)
-(require 'rinari)
 (require 'undo-tree)
 (require 'w32-browser)
 (require 'yaml-mode)
 (require 'yari)
 (require 'yasnippet)
+(autoload 'wl "wl" "Wanderlust" t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; auto-complete
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -125,7 +132,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "cornsilk" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "DejaVu Sans Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "cornsilk" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 95 :width normal :foundry "unknown" :family "Consolas")))))
 
  
 (custom-set-variables
