@@ -29,3 +29,6 @@
 ;; prefer cperl to perl
 ;; from emacswiki CPerlMode
 (defalias 'perl-mode 'cperl-mode)
+
+;; enable iswitchb
+(iswitchb-mode 1)
