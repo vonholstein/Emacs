@@ -52,6 +52,7 @@
 (require 'maxframe)
 (require 'multi-term)
 (require 'undo-tree)
+(require 'uniquify)
 (require 'w32-browser)
 (require 'yaml-mode)
 (require 'yari)
