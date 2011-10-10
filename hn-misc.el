@@ -9,6 +9,7 @@
 	  (smart-split-helper w2)))) 
   (smart-split-helper nil)) 
 ;;switch between windows
+
 (defun select-next-window ()
   "Switch to the next window" 
   (interactive)
@@ -48,3 +49,28 @@
 
 ;; enable hippie-expand
 (global-set-key (kbd "M-/") 'hippie-expand)
+
+;; from http://dotfiles.org/~rretzbach/.emacs
+;; Moving cursor down at bottom scrolls only a single line, not half page
+(setq scroll-step 1)
+(setq scroll-conservatively 5)
+
+;; Show column-number in the mode line
+(column-number-mode 1)
+
+; (meta n) and (meta p) scroll buffer ahead/behind
+(defalias 'scroll-ahead 'scroll-up)
+(defalias 'scroll-behind 'scroll-down)
+
+(defun scroll-n-lines-ahead (&optional n)
+  "Scroll ahead N lines (1 by default)."
+  (interactive "P")
+  (scroll-ahead (prefix-numeric-value n)))
+
+(defun scroll-n-lines-behind (&optional n)
+  "Scroll behind N lines (1 by default)."
+  (interactive "P")
+  (scroll-behind (prefix-numeric-value n)))
+
+(global-set-key [(meta n)] 'scroll-n-lines-ahead)
+(global-set-key [(meta p)] 'scroll-n-lines-behind)
