@@ -36,9 +36,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Load amazon specific files only on amazon system
+(defun amazon-init ()
+  (require 'amz-mason)
+  (require 'amz-common))
+
+(if (string-equal system-name "hnahas.desktop.amazon.com")
+    (amazon-init))
+
 (require 'ack-emacs)
-(require 'amz-mason)
-(require 'amz-common)
 (require 'auto-complete-config)
 (require 'bookmark+)
 (require 'color-theme)
