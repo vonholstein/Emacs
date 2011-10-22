@@ -58,7 +58,7 @@
 ;; Show column-number in the mode line
 (column-number-mode 1)
 
-; (meta n) and (meta p) scroll buffer ahead/behind
+;; (meta n) and (meta p) scroll buffer ahead/behind
 (defalias 'scroll-ahead 'scroll-up)
 (defalias 'scroll-behind 'scroll-down)
 
@@ -74,3 +74,6 @@
 
 (global-set-key [(meta n)] 'scroll-n-lines-ahead)
 (global-set-key [(meta p)] 'scroll-n-lines-behind)
+
+;; prefer k&r style in c-mode
+(setq c-default-style (cons '(c-mode . "k&r") c-default-style))
