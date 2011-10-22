@@ -1,2 +1,2 @@
 ;;Enable icicles
-(icy-mode 1)
+;;(icy-mode 1)
