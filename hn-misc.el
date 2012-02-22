@@ -77,3 +77,6 @@
 
 ;; prefer k&r style in c-mode
 (setq c-default-style (cons '(c-mode . "k&r") c-default-style))
+
+;; anything settings
+(global-set-key (kbd "C-x C-a") 'anything-for-files)
