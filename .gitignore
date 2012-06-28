@@ -1,0 +1,9 @@
+*~
+auto-save-list/*
+backups/*
+bookmarks
+elpa/*
+places
+url/*
+.org-id-locations
+.smex-items
