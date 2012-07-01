@@ -149,11 +149,11 @@
 ; Allow refile to create parent tasks with confirmation
 (setq org-refile-allow-creating-parent-nodes (quote confirm))
 
-;; Change task state to IN PROGRESS from TODO when clocking in
+;; Change task state to IN PROGRESS from TODO,PAUSED,WAITING states when clocking in
 (defun bh/clock-in-to-next (kw)
-  "Switch task from TODO to IN PROGRESS when clocking in.
+  "Switch task from TODO,PAUSED,WAITING states to IN PROGRESS when clocking in.
 Skips remember tasks and tasks with subtasks"
-  (if (and (string-equal kw "TODO")
+  (if (and (or (string-equal kw "TODO") (string-equal kw "PAUSED") (string-equal kw "WAITING"))
            (not (string-equal (buffer-name) "*Remember*")))
       (let ((subtree-end (save-excursion (org-end-of-subtree t)))
             (has-subtask nil))
@@ -167,7 +167,34 @@ Skips remember tasks and tasks with subtasks"
         (when (not has-subtask)
           "IN PROGRESS"))))
 
+;; Change task state to PAUSED from IN PROGRESS when clocking out
+(defun bh/clock-out-to-paused (kw)
+  "Switch task from IN PROGRESS to PAUSED when clocking out.
+Skips remember tasks and tasks with subtasks"
+  (if (and (string-equal kw "IN PROGRESS")
+           (not (string-equal (buffer-name) "*Remember*")))
+      (let ((subtree-end (save-excursion (org-end-of-subtree t)))
+            (has-subtask nil))
+        (save-excursion
+          (forward-line 1)
+          (while (and (not has-subtask)
+                      (< (point) subtree-end)
+                      (re-search-forward "^\*+ " subtree-end t))
+            (when (member (org-get-todo-state) org-not-done-keywords)
+              (setq has-subtask t))))
+        (when (not has-subtask)
+          "PAUSED"))))
+
 (setq org-clock-in-switch-to-state (quote bh/clock-in-to-next))
+(setq org-clock-out-switch-to-state (quote bh/clock-out-to-paused))
+
+;; (defun hn/clock-out-on-pause (nstate)
+;;   "Clock out on state change to waiting"
+;;   if( (and (string-equal org-state "WAITING")
+;;            (not (string-equal (buffer-name) "*Remember*")))
+;;       (org-clock-clock-out)))
+
+;; (setq org-after-todo-state-change-hook (quote hn/clock-out-on-pause))
 
 ;; Save clock data in the CLOCK drawer and state changes and notes in the LOGBOOK drawer
 (setq org-clock-into-drawer "CLOCK")
