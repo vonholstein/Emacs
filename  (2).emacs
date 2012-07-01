@@ -1,4 +1,5 @@
 (setq emacs-lib-root "~/lib-emacs")
+(server-start)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Library paths
@@ -15,6 +16,7 @@
 (setq load-path (cons "~/lib-emacs/vendor/linkd" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/magit" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/multi-term" load-path))
+(setq load-path (cons "~/lib-emacs/vendor/org-mode" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/rinari" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/rinari/rhtml" load-path))
 (setq load-path (cons "~/lib-emacs/vendor/ruby" load-path))
@@ -39,6 +41,7 @@
 (require 'icicles)
 (require 'linkd)
 (require 'multi-term)
+(require 'org)
 (require 'rinari)
 (require 'undo-tree)
 (require 'w32-browser)
@@ -113,7 +116,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#c0c0c0" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "outline" :family "Bitstream Vera Sans Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "cornsilk" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "outline" :family "Consolas")))))
 
  
 (custom-set-variables
@@ -123,10 +126,12 @@
  ;; If there is more than one, they won't work right.
  '(browse-url-browser-function (quote browse-url-firefox))
  '(ecb-options-version "2.40")
- '(org-agenda-files (quote ("~/org/calendar.org" "~/org/refile.org" "~/org/todo.org" "~/org/work.org" "~/org/personal.org")))
- '(show-paren-mode t))
+ '(org-agenda-files (quote ("~/org/work.org")))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
 
 ;; Set path for firefox
 (setq browse-url-firefox-program "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe")
 
-;; temporary sentence
+;;org-mobile
+(setq org-mobile-directory "C:\\Users\\hnahas\\Dropbox\\MobileOrg")
