@@ -80,6 +80,7 @@
 (global-font-lock-mode t)
 (setq visible-bell t) ;;disable system beep
 
+(setq fill-column 150)
 ;; set backup to .saves folder
 (setq
    backup-by-copying t      ; don't clobber symlinks
@@ -205,4 +206,13 @@ Skips remember tasks and tasks with subtasks"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; END org-mode configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; ecb settings
+(setq ecb-options-version "2.40")
+;; ecb barfs if following setting is absent
+(setq stack-trace-on-error t)
+;; other settings (self-evident)
+(setq ecb-windows-width 0.20)
+(setq ecb-tip-of-the-day nil)
+
 
