@@ -34,6 +34,8 @@
 ;; Modes
 (add-to-list 'auto-mode-alist '("\\.\\(?:bat\\|com\\)$" . bat-mode))
 
+;; disable flyspell
+
 ;;smart-split
 (defun smart-split ()
   "Split the frame into 80-column sub-windows, and make sure no window has fewer than 80 columns." 
@@ -80,7 +82,7 @@
 (global-font-lock-mode t)
 (setq visible-bell t) ;;disable system beep
 
-(setq fill-column 150)
+(setq-default fill-column 150)
 ;; set backup to .saves folder
 (setq
    backup-by-copying t      ; don't clobber symlinks
@@ -104,7 +106,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq org-directory "~/org")
-(setq org-agenda-files (quote ("~/org/work.org" "~/org/study.org" "~/org/books.org" "~/org/personal.org")))
+(setq org-agenda-files (quote ("~/org/work.org" "~/org/goals.org" "~/org/study.org" "~/org/books.org" "~/org/personal.org")))
 ;; Set to the name of the file where new notes will be stored
 (setq org-mobile-inbox-for-pull "~/org/flagged.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
@@ -216,3 +218,17 @@ Skips remember tasks and tasks with subtasks"
 (setq ecb-tip-of-the-day nil)
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files (quote ("~/org/projects.org" "~/org/work.org" "~/org/study.org" "~/org/books.org" "~/org/personal.org"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(put 'ido-exit-minibuffer 'disabled nil)
+(put 'upcase-region 'disabled nil)
