@@ -61,10 +61,34 @@
 
 
 ;; Other
+(if (string-equal system-type "windows-nt")
+    (progn
+      (print "Detected windows")
+      (setq explicit-shell-file-name "C:/babun/.babun/cygwin/bin/bash.exe")
+      (setq shell-file-name explicit-shell-file-name)
+      (add-to-list 'exec-path "C:/babun/.babun/cygwin/bin")))
+      
 (put 'dired-find-alternate-file 'disabled nil)
 (put 'upcase-region 'disabled nil)
-(setq explicit-shell-file-name "C:/babun/.babun/cygwin/bin/bash.exe")
-(setq shell-file-name explicit-shell-file-name)
+
+
 ;(setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
-(add-to-list 'exec-path "C:/babun/.babun/cygwin/bin")
+
 (put 'narrow-to-region 'disabled nil)
+
+
+;;c-tags
+;; (require 'setup-general)
+;; (if (version< emacs-version "24.4")
+;;     (require 'setup-ivy-counsel)
+;;   (require 'setup-helm)
+;;   (require 'setup-helm-gtags))
+;; ;; (require 'setup-ggtags)
+;; (require 'setup-cedet)
+;; (require 'setup-editing)
+
+system-type
+
+(print "habib")
+
+(string-equal system-type "windows-nt")
